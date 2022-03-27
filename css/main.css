@@ -10,7 +10,7 @@ body{
     background-color: #222;
     line-height: 1.6;
     text-rendering: optimizeLegibility;
-    background: #000 url(../asset/cover.jpg) no-repeat fixed center center;
+    background: rgb(0, 0, 0) url(../asset/cover.jpg) no-repeat fixed center center;
 }
 h1,h2,h3,h4,p,ul,ol, figure{
     margin: 0;
@@ -52,14 +52,14 @@ input,textarea{
     width: .6rem;
 }
 *::-webkit-scrollbar-thumb {
-    background-color: rgb(92, 91, 91);
+    background-color: rgb(202, 198, 198);
     outline: thin solid #222;
 }
 
 /*theme*/
 
 :root{
-    --bgc-header: #7c747c;
+    --bgc-header: #25152546;
     --bgc-main: #f1f1f1;
     --bgc-sidebar-button: #000000;
     --bgc-logo: #f44336;
