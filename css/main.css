@@ -10,7 +10,7 @@ body{
     background-color: #222;
     line-height: 1.6;
     text-rendering: optimizeLegibility;
-    background:url(../asset/cover.jpg) no-repeat fixed center center;
+    background:url(../asset/cover.jpg) no-repeat fixed center / cover ;
 }
 h1,h2,h3,h4,p,ul,ol, figure{
     margin: 0;
