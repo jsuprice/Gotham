@@ -1,22 +1,26 @@
 /* reset css */
 @import url('https://fonts.googleapis.com/css2? family=Poppins:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2? family=Comic+Neue:ital,wght@1,300&family=Hurricane&family=Montserrat:ital,wght@0,100;1,100&family=Poppins:ital,wght@1,500&display=swap');
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
-    background: #222 url(../asset/cover.jpg)no-repeat fixed center center /cover; 
+    background: url(../asset/cover.jpg) no-repeat fixed center center / cover; 
 
 }
 body{
-    font: 1.6rem  sans-serif;
+    font: 1.6rem 'Poppins',sans-serif;
     margin: 0;
     line-height: 1.6;
     text-rendering: optimizeLegibility;
     
 }
-h1,h2,h3{
-    font-family: 'Poppins', cursive;
+h1,h2,h3,ol{
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
     text-transform: capitalize;
+}
+h1,h2{
+    font-family: 'Comic Neue', cursive;
 }
 h1,h2,h3,h4,p,ul,ol, figure{
     margin: 0;
@@ -41,8 +45,8 @@ img{
 
 /* theme */
 :root{
-    --color-primary: #3D3C3D;
-    --color-secondary: #8E8D8D;
+    --color-primary: #636363;
+    --color-secondary: #a7a1a1;
     --color-complementary: #403F3F;
     --color-last:#3C3737;
     --color-header:#ECE6EA;
@@ -50,7 +54,7 @@ img{
 header,nav,main,footer{
     max-width: 120rem;
     margin: 0 auto;
-    background-color: rgba(209, 209, 209, 0.5); 
+    background-color: rgba(209, 209, 209, 0.575); 
 }
 header h1, section h2{
     line-height: 9.0rem;
@@ -58,34 +62,73 @@ header h1, section h2{
     color: var(--color-text);
     background-color: var(--bgc-primary);
     border: solid 1px black;
-} 
-main section{
-    max-width: 120rem;
-    margin: 5rem auto;
-    background-color: var(--bgc-primary);
-   
-}       
-section h2{
-    line-height: 6.0rem;
-    text-align: left;
-    padding-left: 1rem;
-} 
-section ul{
-    overflow: hidden;
-    padding: 1rem 0 0 1rem; 
-
-}       
-section ul li{
-    width: calc(100% / 4 - 1rem);
-    display: block;
-    float: left;
-    margin: 0 1rem 1rem 0;
 }
-section ul li:nth-of-type(5), section ul li:nth-of-type(6){
-    width: calc(100% / 2 - 1rem);
+nav .main-menu li a{
+    display: block;
+    width: auto;
+    text-align: center;
+    line-height: 4.5rem;
+    transition: all .6s ease-in-out;
+}
+nav .main-menu li :hover a{
+    background-color: rgba(170, 161, 161);
+}
+
+section h2::before, nav h2::before{
+    vertical-align: -.6rem;
+    margin-right: .5rem;   
+}
+header h1, section h2, nav h2{
+    position: sticky;
+    top: 0;
+    font-size: 5rem;
+    color:var(--color-secondary);
+    text-shadow: -.2rem .2rem 0 var(--color-primary);
+}
+header h1{
+    text-align: center;
+}       
+section h2, nav h2{
+    font-size: 3rem;
+    background-color: var(--color-header);
+    padding: 1rem;
+    box-shadow: 0 .4rem 0 var(--color-secondary);
+} 
+section p, nav ol {
+    padding: 1rem 0; 
+
 }
 footer p{
     text-align: center;
     color: var(--color-text);
+}
+/* responsive */
+@media screen and (max-width: 100.0rem){
+    section p{
+        text-align: justify;
+    }
+    nav .main-menu li:not(li:last-child){
+        border-right: 0;
+    }
+    nav .main-menu li a{
+        text-align: left;
+        color: #fff;
+    }
+    nav .main-menu li{
+        background-color: var(--color-primary);
+        padding: .5rem;
+        margin-bottom: .1rem;
+    }
+    header h1{
+        text-shadow: none;
+    }
+    header h1::before,section h2:before,nav h2::before{
+        content: '';
+    }
+    section h2, nav h2{
+        padding: 0 0 0 .1rem;
+        font-size: 2.5rem;
+        text-shadow: none;
+    }   
 }
 
