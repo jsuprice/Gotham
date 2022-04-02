@@ -1,21 +1,22 @@
 /* reset css*/
-@import url('https://fonts.googleapis.com/css2? family=Poppins:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2? family=Comic+Neue:ital,wght@1,300&family=Hurricane&family=Montserrat:ital,wght@0,100;1,100&family=Poppins:ital,wght@1,500&display=swap');
 html{
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
 body{
-    font: 1.6rem 'Poppins' ,sans-serif;
+    font: 1.6rem 'Comic Neue' ,sans-serif;
     margin: 0;
     background-color: #222;
     line-height: 1.6;
     text-rendering: optimizeLegibility;
-    background:url(../asset/cover.jpg) no-repeat fixed center / cover ;
+    background: url(../asset/cover.jpg) no-repeat fixed center / cover ;
 }
 h1,h2,h3,h4,p,ul,ol, figure{
     margin: 0;
     padding: 0;
     list-style: none;
+    font-weight: 200;
    
 }
 *{
@@ -52,14 +53,14 @@ input,textarea{
     width: .6rem;
 }
 *::-webkit-scrollbar-thumb {
-    background-color: rgb(202, 198, 198);
+    background-color: rgb(92, 91, 91);
     outline: thin solid #222;
 }
 
 /*theme*/
 
 :root{
-    --bgc-header: #25152546;
+    --bgc-header: #42414d;
     --bgc-main: #f1f1f1;
     --bgc-sidebar-button: #000000;
     --bgc-logo: #f44336;
@@ -74,8 +75,8 @@ header h1, section h2{
     background-color: var(--bgc-header);
 }     
 header h1::before{   
-    /* content: url(../favicon/d4i3vwe-4dafc4bd-334b-4fea-8388-7414f812b6e6.png);
-     vertical-align: middle;*/
+     content:/* url(../favicon/d4i3vwe-4dafc4bd-334b-4fea-8388-7414f812b6e6.png);*/
+     vertical-align: middle;
 }
 header h1 img{
     width: 6rem;
@@ -83,7 +84,7 @@ header h1 img{
 }
 section{
     max-width: 100rem;
-    margin: 5rem auto;
+    margin: 0rem auto;
     background-color: var(--bgc-main);
     padding: 1rem;
 }    
@@ -95,7 +96,7 @@ section h2{
 }  
 section ul{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 section ul li:nth-child(1){
