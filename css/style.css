@@ -1,0 +1,133 @@
+/* reset css */
+@import url('https://fonts.googleapis.com/css2? family=Poppins:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2? family=Comic+Neue:ital,wght@1,300&family=Hurricane&family=Montserrat:ital,wght@0,100;1,100&family=Poppins:ital,wght@1,500&display=swap');
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    background: url(../asset/cover.jpg) no-repeat fixed center center / cover; 
+
+}
+body{
+    font: 1.7rem 'Poppins',sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    
+}
+h1,h2,h3,ol{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+h1,h2{
+    font-family: 'Comic Neue',cursive;
+}
+h1,h2,h3,h4,p,ul,ol, figure{
+    margin: 0;
+    padding: 0;
+    list-style: none;    
+}
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+img{
+    display: inline-block;
+    width: 100%;
+    height: 100;
+    vertical-align: middle;
+    object-fit: cover;
+    
+}
+
+/* theme */
+:root{
+    --color-primary: #636363;
+    --color-secondary: #a7a1a1;
+    --color-complementary: #403F3F;
+    --color-last:#3C3737;
+    --color-header:#e6e6e6;
+}
+header,nav,main,footer{
+    max-width: 120rem;
+    margin: 0 auto;
+    background-color: rgba(103, 102, 102, 0.575); 
+}
+header h1, section h2{
+    line-height: 9.0rem;
+    text-align: center;
+    color: var(--color-text);
+    background-color: var(--bgc-primary);
+    border: solid 1px black;
+}
+nav .main-menu li a{
+    display: block;
+    width: auto;
+    text-align: center;
+    line-height: 4.5rem;
+    transition: all .6s ease-in-out;
+}
+nav .main-menu li :hover a{
+    background-color: rgba(170, 161, 161);
+}
+
+section h2::before, nav h2::before{
+    vertical-align: -.6rem;
+    margin-right: .5rem;   
+}
+header h1, section h2, nav h2{
+    position: sticky;
+    top: 0;
+    font-size: 5rem;
+    color:var(--color-secondary);
+    text-shadow: -.2rem .2rem 0 var(--color-primary);
+}
+header h1{
+    text-align: center;
+}       
+section h2, nav h2{
+    font-size: 3rem;
+    background-color: var(--color-header);
+    padding: 1rem;
+    box-shadow: 0 .4rem 0 var(--color-secondary);
+} 
+section p, nav ol {
+    padding: 1rem 0; 
+
+}
+footer p{
+    text-align: center;
+    color: var(--color-text);
+}
+/* responsive */
+@media screen and (max-width: 100.0rem){
+    section p{
+        text-align: justify;
+    }
+    nav .main-menu li:not(li:last-child){
+        border-right: 0;
+    }
+    nav .main-menu li a{
+        text-align: left;
+         color: #fff;
+    }
+    nav .main-menu li{
+        background-color: var(--color-primary);
+        padding: .5rem;
+        margin-bottom: .1rem;
+    }
+    header h1{
+        text-shadow: none;
+    }
+    header h1::before,section h2:before,nav h2::before{
+        content: '';
+    }
+    section h2, nav h2{
+        padding: 0 0 0 .1rem;
+        font-size: 2.5rem;
+        text-shadow: none;
+    }   
+}

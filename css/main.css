@@ -1,0 +1,114 @@
+/* reset css*/
+@import url('https://fonts.googleapis.com/css2? family=Comic+Neue:ital,wght@1,300&family=Hurricane&family=Montserrat:ital,wght@0,100;1,100&family=Poppins:ital,wght@1,500&display=swap');
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font: 1.7rem 'Comic Neue' ,sans-serif;
+    margin: 0;
+    background-color: #222;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    background: url(../asset/cover.jpg) no-repeat fixed center / cover ;
+}
+h1,h2,h3,h4,p,ul,ol, figure{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: 200;
+   
+}
+*{
+   box-sizing: border-box; 
+}
+img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    object-fit: cover;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+
+button, input[type="submit"]{
+    padding: 0;
+    background-color: transparent;
+    font-size: inherit;
+    border: 0;
+}
+input,textarea{
+    border: 0;
+}
+/* scroll bars */
+*{
+    /* For FF and non-webkit browsers */
+    scrollbar-width: thin;
+    scrollbar-color: #000 #fff;
+}
+*::-webkit-scrollbar {
+    width: .6rem;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(14, 13, 13);
+    outline: thin solid #222;
+}
+
+/*theme*/
+
+:root{
+    --bgc-header: #42414d;
+    --bgc-main: #f1f1f1;
+    --bgc-sidebar-button: #000000;
+    --bgc-logo: #f44336;
+    --border-color:#ccc;
+    --bgc-color: #222;
+}
+header h1, section h2{
+    font-weight: 400;
+    line-height: 5.5rem;
+    color:var(--bgc-main);
+    text-align: center;
+    background-color: var(--bgc-header);
+}     
+header h1::before{   
+     content:/* url(../favicon/d4i3vwe-4dafc4bd-334b-4fea-8388-7414f812b6e6.png);
+     vertical-align: middle;*/
+     
+}
+header h1 img{
+    width: 6rem;
+    vertical-align: middle;
+}
+section{
+    max-width: 100rem;
+    margin: 0rem auto;
+    background-color: var(--bgc-main);
+    padding: 1rem;
+}    
+section h2{
+    text-align: left;
+    padding: 1rem;
+    line-height: normal;
+    margin-bottom: 1rem;
+}  
+section ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+section ul li:nth-child(1){
+    grid-column: 1 / 3;
+    grid: 1rem;
+}
+section ul li:nth-child(6){
+    grid-column: 5 / 1;
+}
+footer h3{
+    font-size: small;
+    text-align: center;
+    color: var(--bgc-main);
+}
