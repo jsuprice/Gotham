@@ -18,4 +18,4 @@ Histoire de New York : les origines
 
 La démographie de l'État de New York se caractérise par une grande part d'immigrés.
 
-[Cliquer sur le lien](https://jsuprice.github.io/Gotham/)
+[Cliquer sur le lien]( https://jsuprice.github.io/Gotham/)
